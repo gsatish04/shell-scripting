@@ -4,7 +4,7 @@
 
 types of shell scripting
 shell scripting file
-how to execute shell scrit
+how to execute shell script
 
 
 ````
