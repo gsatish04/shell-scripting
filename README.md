@@ -7,7 +7,7 @@
 3. variables
 4. inputs
 5. functions
-6. re directors, quotes, exit states
+6. re-directors, quotes, exit states
 7. conditions
 8. loops
 9. sed editor
