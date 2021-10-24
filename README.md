@@ -5,7 +5,7 @@
 1. she bang & comments
 2. print
 3. variables
-4. inuts
+4. inputs
 5. functions
 6. re directors, quotes, exit states
 7. conditions
