@@ -3,8 +3,18 @@
 ## Topics
 
 types of shell scripting
+
+sh bash ksh csh zsh
+
+
 shell scripting file
+.sh
+.bash
+
+
 how to execute shell script
+$bash script.sh
+$sh script.sh
 
 
 ````
