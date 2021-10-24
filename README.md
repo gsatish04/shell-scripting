@@ -2,6 +2,12 @@
 
 ## Topics
 
+types of shell scripting
+shell scripting file
+how to execute shell scrit
+
+
+````
 1. she bang & comments
 2. print
 3. variables
@@ -12,7 +18,7 @@
 8. loops
 9. sed editor
 
-,,,,,
+````
 
 -----
 then go with setting up Roboshop Project
