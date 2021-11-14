@@ -2,22 +2,40 @@
 
 ## Topics
 
-types of shell scripting
+Type of shell scripting
+----------
+sh, bash, ksh, csh, zsh
+Our choice is Bash
 
-sh bash ksh csh zsh
+
+Reasons why bash 
+1. Bash is default in Redhat family OS.
+2. Bash is having features of Sh, Ksh, Csh.
+3. In Redhat family OS - Sh and Bash are same. 
 
 
 shell scripting file
+----------
 .sh
 .bash
 
 
-how to execute shell script
+Extensions are only for our understanding, usually we make `.sh` as extension for shell scripting files. 
+
+
+How to execute shell script
+--------
+
+``````
 $bash script.sh
 $sh script.sh
 
 
 ````
+
+
+`````
+
 1. she bang & comments
 2. print
 3. variables
