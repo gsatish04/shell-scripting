@@ -7,7 +7,13 @@ function abc () {
   echo iam a function abc
   }
 
+xyz () {
+  echo iam a function xyz
+
+}
+
+
+
 ##main program
-
 abc
-
+xyz
