@@ -26,16 +26,13 @@ Extensions are only for our understanding, usually we make `.sh` as extension fo
 How to execute shell script
 --------
 
-``````
+```
 $bash script.sh
 $sh script.sh
+```
 
 
-````
-
-
-`````
-
+```
 1. she bang & comments
 2. print
 3. variables
@@ -46,7 +43,8 @@ $sh script.sh
 8. loops
 9. sed editor
 
-````
+```
+
 
 -----
 then go with setting up Roboshop Project
