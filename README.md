@@ -31,7 +31,7 @@ $bash script.sh
 $sh script.sh
 ```
 
-
+only in Redhat family Bash and Sh are same, If you are around another OS like Ubuntu then Bash and Sh are differs.
 ```
 1. she bang & comments
 2. print
