@@ -21,5 +21,8 @@ x=10
 y=20
 echo ${x}X${y} = 200
 
+#Date=2021-11-14
+DATE=$(date +%F)
+echo Good Morning, Welcome, Today date is $Date
 
 
