@@ -39,5 +39,9 @@ echo -e "\e[35mText in Magenta Color"
 echo -e "\e[36mText in Cyan Color"
 
 
+## color always follows, when we enable color and its our responsibility to disable it as well, 0 col code is used to disable.
+
+echo -e "\e[31mText in Red Color\e[0m"
+echo text in normal color
 
 
