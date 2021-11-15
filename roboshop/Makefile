@@ -6,7 +6,7 @@ help:
         help_split=($$help_line) ; \
         help_command=`echo $${help_split[0]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
         help_info=`echo $${help_split[2]} | sed -e 's/^ *//' -e 's/ *$$//'` ; \
-        printf "%-30s %s\n" $$help_command $$help_info ; \
+        printf "%-10s %s\n" $$help_command $$help_info ; \
     done
 
 cart: ## Setup Cart Component
@@ -37,7 +37,3 @@ rabbitmq: ## Setup Rabbitmq Component
 
 mongodb: ## Setup Mongodb Component
 	@bash components/mongodb.sh
-
-
-##targets
-##	rules
