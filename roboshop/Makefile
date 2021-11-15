@@ -13,7 +13,7 @@ help: ## This help dialog.
 
 cart: ## Setup Cart Component
 	@bash components/cart.sh
-catalogue: #### Setup Catalogue Component
+catalogue: ## Setup Catalogue Component
 	@bash components/catalogue.sh
 
 user: ## Setup User Component
