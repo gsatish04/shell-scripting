@@ -9,33 +9,33 @@ help:
         printf "%-30s %s\n" $$help_command $$help_info ; \
     done
 
-cart: #### Setup Cart Component
+cart: ## Setup Cart Component
 	@bash components/cart.sh
-catalogue: #### Setup Catalogue Component
+catalogue: ## Setup Catalogue Component
 	@bash components/catalogue.sh
 
-user: #### Setup User Component
+user: ## Setup User Component
 	@bash components/user.sh
 
-shipping: #### Setup Catalogue Component
+shipping: ## Setup Catalogue Component
 	@bash components/shipping.sh
 
-payment: #### Setup Payment Component
+payment: ## Setup Payment Component
 	@bash components/payment.sh
 
-frontend: #### Setup Frontend Component
+frontend: ## Setup Frontend Component
 	@bash components/frontend.sh
 
-mysql: #### Setup Mysql Component
+mysql: ## Setup Mysql Component
 	@bash components/mysql.sh
 
-redis: #### Setup Redis Component
+redis: ## Setup Redis Component
 	@bash components/redis.sh
 
-rabbitmq: #### Setup Rabbitmq Component
+rabbitmq: ## Setup Rabbitmq Component
 	@bash components/rabbitmq.sh
 
-mongodb: #### Setup Mongodb Component
+mongodb: ## Setup Mongodb Component
 	@bash components/mongodb.sh
 
 
