@@ -5,12 +5,7 @@ Print() {
   echo -e "\n\e[36m==================$1================\e[0m" >>$LOG
 }
 
-LOG=/tmp/roboshop.log
-rm -f $LOG
-
-Print "Installing Nginx"
-yum install nginx -y &>>$LOG
-
+Stat(){
 if [ $? -eq 0 ] ; then
   echo -e "\e[1;32mSUCCESS\e[0m"
 else
@@ -18,10 +13,23 @@ else
 
 fi
 
+LOG=/tmp/roboshop.log
+rm -f $LOG
+
+Print "Installing Nginx"
+yum install nginx -y &>>$LOG
+Stat $?
+
+
+
 Print "Enabling Nginx"
 systemctl enable nginx
+Stat $?
+
 Print "Starting Nginx"
 systemctl start nginx
+Stat $?
+
 
 exit
 
