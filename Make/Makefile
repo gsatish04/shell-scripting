@@ -1,8 +1,8 @@
 none:
-	@echo -e "one - Target One\ntwo - Target Two"
-one:
+	@grep '####' Makefile
+one: #### Target One
 	@echo one
-two:
+two: #### Target Two
 	@echo two
 
 ##targets
