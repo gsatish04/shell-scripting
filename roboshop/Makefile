@@ -26,7 +26,6 @@ redis: #### Setup Redis Component
 rabbitmq: #### Setup Rabbitmq Component
 	@bash components/rabbitmq.sh
 
-
 mongodb: #### Setup Mongodb Component
 	@bash components/mongodb.sh
 
