@@ -16,11 +16,11 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 Stat $?
 
 Print "Remove Old Content"
-rm -rf /home/roboshop/catalogue
+rm -rf /home/roboshop/catalogue &>>LOG
 Stat $?
 
 Print "Extract Catalogue"
-unzip -o -d /home/roboshop /tmp/catalogue.zip
+unzip -o -d /home/roboshop /tmp/catalogue.zip &>>LOG
 Stat $?
 
 exit
