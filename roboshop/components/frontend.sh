@@ -16,13 +16,15 @@ Print "Starting Nginx"
 systemctl start nginx &>>$LOG
 Stat $?
 
+Print "Download Html Pages"
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+
+Print "Remove Old Html Pages"
+rm -rf /usr/share/nginx/html
+Stat $?
 
 exit
 
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
-
-cd /usr/share/nginx/html
-rm -rf *
 unzip /tmp/frontend.zip
 mv frontend-main/* .
 mv static/* .
