@@ -36,6 +36,11 @@ cd /home/roboshop/catalogue
 npm install &>>LOG
 Stat $?
 
+Print " Fix App Permission"
+crown -R roboshop:roboshop /home/roboshop
+Stat $?
+
+
 exit
 NOTE: We need to update the IP address of MONGODB Server in systemd.service file
 Now, lets set up the service with systemctl.
