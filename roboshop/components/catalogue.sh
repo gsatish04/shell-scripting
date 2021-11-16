@@ -15,7 +15,6 @@ else
 fi
 Stat $?
 
-
 Print "Download Catalogue"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>LOG
 Stat $?
@@ -28,13 +27,15 @@ Print "Extract Catalogue"
 unzip -o -d /home/roboshop /tmp/catalogue.zip &>>LOG
 Stat $?
 
-exit
+Print "Copy Content"
+mv /home/roboshop/catalogue-main /home/roboshop/catalogue &>>LOG
+Stat $?
 
-$ cd /home/roboshop
-$ unzip /tmp/catalogue.zip
-$ mv catalogue-main catalogue
-$ cd /home/roboshop/catalogue
-$ npm install
+Print "Install NodesJS dependencies"
+cd /home/roboshop/catalogue
+npm install &>>LOG
+Stat $?
+
 NOTE: We need to update the IP address of MONGODB Server in systemd.service file
 Now, lets set up the service with systemctl.
 
