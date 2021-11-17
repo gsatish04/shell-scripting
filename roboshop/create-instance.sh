@@ -11,3 +11,8 @@ else
 fi
 
 
+COUNT=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=$1" | jq ".Reservations[].Instances[].PrivateIpAddress"
+
+
+sed -e "s/DNSNAME/$1.roboshop.internal/" -e "s/IPADDRESS/????/" record.json >/tmp/record.json
+
