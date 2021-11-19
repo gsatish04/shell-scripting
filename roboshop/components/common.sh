@@ -17,8 +17,6 @@ if [ $? -eq 0 ] ; then
 else
     echo -e "\e[1;31mfailure\e[0m"
     echo -e "\e[1;33m Script Failed and check the detailed log in $LOG file\e[0m"
-    exit1
-
 fi
 }
 
