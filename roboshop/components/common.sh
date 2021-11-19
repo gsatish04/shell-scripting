@@ -29,7 +29,7 @@ DOWNLOAD() {
   curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>$LOG
   Stat $?
 
-  Print "Extract $COMPONENT_NAME Content"
+  Print "Extract $COMPONENT_NAME"
   unzip -o -d $1 /tmp/${COMPONENT}.zip &>>$LOG
   Stat $?
 
