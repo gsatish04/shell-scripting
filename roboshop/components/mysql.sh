@@ -30,7 +30,7 @@ echo 'show databases;' | mysql -u root -p"${NEW_PASSWORD}" &>>$LOG
     Stat $?
  fi
 
-DOWNLOAD
+DOWNLOAD "/tmp"
 
 #Run the following SQL commands to remove the password policy.
 #> uninstall plugin validate_password;
