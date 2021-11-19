@@ -16,5 +16,4 @@ if [ "$STAT" == "OK" ]; then
   Stat 0
 else
   Stat 1
-
 fi
