@@ -36,8 +36,8 @@ cd /home/roboshop/catalogue
 npm install --unsafe-perm &>>$LOG
 Stat $?
 
-Print " Fix App Permission"
-crown -R roboshop:roboshop /home/roboshop
+Print " Fix App Permissions"
+chown -R roboshop:roboshop /home/roboshop
 Stat $?
 
 Print "Update DNS records in SystemD config"
