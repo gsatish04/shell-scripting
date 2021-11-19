@@ -33,7 +33,7 @@ Stat $?
 
 Print "Install NodesJS dependencies"
 cd /home/roboshop/catalogue
-npm install &>>$LOG
+npm install --unsafe-perm &>>$LOG
 Stat $?
 
 Print " Fix App Permission"
