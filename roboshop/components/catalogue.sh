@@ -12,7 +12,7 @@ Stat $?
 Print "Add Roboshop User"
 id roboshop &>>$LOG
 if  [ $? -eq 0 ]; then
-  echo User Roboshop already exists
+  echo User Roboshop already exists &>>$LOG
 else
   useradd roboshop &>>$LOG
 fi
@@ -39,7 +39,7 @@ cd /home/roboshop/catalogue
 npm install --unsafe-perm &>>$LOG
 Stat $?
 
-Print " Fix App Permissions"
+Print "Fix App Permissions"
 chown -R roboshop:roboshop /home/roboshop
 Stat $?
 
