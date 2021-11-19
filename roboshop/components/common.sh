@@ -29,11 +29,11 @@ DOWNLOAD() {
   curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>$LOG
   Stat $?
 
-  Print "Extract ${COMPONENT} Content"
+  Print "Extract $COMPONENT_NAME Content"
   unzip -o -d $1 /tmp/${COMPONENT}.zip &>>$LOG
   Stat $?
 
-  if [ "$1" =="/home/roboshop" ]; then
+  if [ "$1" == "/home/roboshop" ]; then
     Print "Remove Old Content"
     rm -rf /home/roboshop/${COMPONENT} &>>$LOG
     Stat $?
@@ -88,8 +88,6 @@ MAVEN() {
   Stat $?
 
   SYSTEMD
-
-
 }
 
 NODEJS() {
