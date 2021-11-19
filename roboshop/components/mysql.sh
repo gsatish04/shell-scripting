@@ -23,11 +23,12 @@ DEFAULT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $
 NEW_PASSWORD="RoboShop@1"
 
 echo 'show databases;' | mysql -u root -p"${NEW_PASSWORD}" &>>$LOG
- if [ $? -eq 0 ]; then
-    echo "Password is already changed"
- else
-    echo "Password is not changed"
-fi
+ if [ $? -ne 0 ]; then
+    Print "Changing the Default Password"
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY '${NEW_PASSWORD}';\nuninstall plugin validate_password;" >/tmp/pass.sql
+    mysql -uroot -p"${DEFAULT_PASSWORD}" </tmp/pass.sql &>>$LOG
+    Stat $?
+ fi
 
 #Run the following SQL commands to remove the password policy.
 #> uninstall plugin validate_password;
