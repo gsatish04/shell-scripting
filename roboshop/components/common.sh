@@ -11,7 +11,6 @@ Print() {
   echo -e "\n\e[36m==================$1================\e[0m" >>$LOG
 }
 
-
 Stat(){
 if [ $? -eq 0 ] ; then
   echo -e "\e[1;32mSUCCESS\e[0m"
