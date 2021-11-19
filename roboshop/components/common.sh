@@ -1,3 +1,5 @@
+#!/bin/bash
+
 Print() {
   LSPACE=$(echo $1 | awk '{print length}')
   SPACE=$(($MSPACE-$LSPACE))
@@ -17,7 +19,7 @@ Stat(){
  else
     echo -e "\e[1;31mfailure\e[0m"
     echo -e "\e[1;33m Script Failed and check the detailed log in $LOG file\e[0m"
-    exit 1
+      exit 1
  fi
 }
 
