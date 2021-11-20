@@ -63,7 +63,7 @@ SYSTEMD() {
     Stat $?
 
     Print "Update DNS records in SystemD config"
-    sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' -e 's/CARTENDPOINT/cart.roboshop.internal/' -e 's/DBHOST/mysql.roboshop.internal/' /home/roboshop/${COMPONENT}/systemd.service  &>>$LOG
+    sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' -e 's/REDIS_ENDPOINT/redis.roboshop.internal/' -e 's/MONGO_ENDPOINT/mongodb.roboshop.internal/' -e 's/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/' -e 's/CARTENDPOINT/cart.roboshop.internal/' -e 's/DBHOST/mysql.roboshop.internal/' -e 's/CARTHOST/cart.roboshop.internal/' -e 's/USERHOST/user.roboshop.internal/' -e 's/AMQPHOST/rabbitmq.roboshop.internal/' /home/roboshop/${COMPONENT}/systemd.service  &>>$LOG
     Stat $?
 
     Print "Copy SystemD file"
@@ -73,8 +73,29 @@ SYSTEMD() {
     Print "Start ${COMPONENT_NAME} Service"
     systemctl daemon-reload &>>$LOG && systemctl restart ${COMPONENT} &>>$LOG && systemctl enable ${COMPONENT} &>>$LOG
     Stat $?
-
 }
+
+PYTHON() {
+
+ Print "Install Python 3"
+ yum install python36 gcc python3-devel -y &>>$LOG
+ Stat $?
+
+ ROBOSHOP_USER
+ DOWNLOAD "/home/roboshop"
+
+ Print "Install the dependencies"
+ cd /home/roboshop/payment
+ pip3 install -r requirements.txt &>>$LOG
+ USER_ID=$(id -u roboshop)
+ GROUP_ID=$(id -g roboshop)
+ Print "Update ${COMPONENT_NAME} Service"
+ sed -i -e "/uid/ c uid = ${USER_ID}" -e "/gid/ c gid = ${GROUP_ID}" /home/roboshop/${COMPONENT}/${COMPONENT}.ini
+ Stat $?
+
+ SYSTEMD
+}
+
 
 MAVEN() {
   Print "Install Maven"
