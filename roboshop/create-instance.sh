@@ -15,7 +15,7 @@ CREATE() {
  ## xargs is used to remove the double quotes
 }
 
-if [ "$1" == "all"]; then
+if [ "$1" == "all" ]; then
   ALL=(frontend mongodb catalogue redis user cart mysql shipping rabbitmq payment)
   for component in ${ALL[*]}; do
     echo "Creating Instance - $component"
