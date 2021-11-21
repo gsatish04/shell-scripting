@@ -12,3 +12,4 @@ while [ $a -gt 0 ]; do
 done
 
 # above a=10 is it repeats ten times. and double braces (()) means arithamatic expression.
+
