@@ -11,5 +11,10 @@ while [ $a -gt 0 ]; do
   a=$(($a-1))
 done
 
-# above a=10 is it repeats ten times. and double braces (()) means arithamatic expression.
+# above a=10 is it repeats ten times. and double braces (()) means arithamatic expression, sleep 0.5 is at output it waits 0.5sec for each time.
+
+for fruit in apple orange banana peach ; do
+  echo Fruit Name = $fruit
+done
+
 
