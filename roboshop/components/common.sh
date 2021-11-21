@@ -103,7 +103,7 @@ MAVEN() {
   Stat $?
 
  ROBOSHOP_USER
- DOWNLOAD "home/roboshop"
+ DOWNLOAD "/home/roboshop"
 
   Print "Make Maven Package"
   cd /home/roboshop/${COMPONENT}
@@ -120,7 +120,7 @@ NODEJS() {
 
   ROBOSHOP_USER
 
-  DOWNLOAD "home/roboshop"
+  DOWNLOAD "/home/roboshop"
 
   Print "Install NodesJS dependencies"
   cd /home/roboshop/${COMPONENT}
